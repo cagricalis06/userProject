@@ -1,0 +1,17 @@
+.container{
+	margin-top: 35px;
+}
+
+#enabled{
+	width: 20px;
+	height: 20px;
+}
+
+.enabled-wrap{
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#saveUser{
+	height: 30px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>User Management</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"></link>
+  <link rel="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css"></link>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="user_management.js"></script>
+
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+
+  <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+  <div class="container-flued">
+    <div class="card border-light m-5">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-6 d-flex">
+            <button type="button" class="btn btn-primary btn-lg" style="margin-right: 15px">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
+              New User
+            </button>
+            <div class="form-group">
+              <div class="enabled-wrap d-flex">
+                <input type="checkbox" class="form-control" id="enabled2" onchange="changeInput(this)" name="enabled2" value="1">
+                <label for="enabled2" class="col-form-label">Hide Disabled User</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <button type="button" class="btn btn-primary btn-lg" id="saveUser" onclick="saveUser()">
+              Save User
+            </button>
+          </div>
+          
+        </div>
+        </div>
+          <div class="card-body">
+            <div class="row">
+        <div class="col-xs-6">
+          <table id="userList" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Enabled</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="card">
+                <div class="card-header">
+                    New User
+                </div>
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label for="userName" class="col-sm-3 col-form-label">Username:</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="userName" name="userName">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="displayName" class="col-sm-3 col-form-label">Display Name:</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="displayName" name="displayName">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="phone" class="col-sm-3 col-form-label">Phone:</label>
+                    <div class="col-sm-9">
+                      <input type="number" class="form-control" id="phone" name="phone">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="email" class="col-sm-3 col-form-label">Email:</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="userRoles" class="col-sm-3 col-form-label">User Roles:</label>
+                    <div class="col-sm-9">
+                     <select class="custom-select" id="userRoles" >
+                        <option selected>Select user roles...</option>
+                        <option value="guest">Guest</option>
+                        <option value="admin">Admin</option>
+                        <option value="superAdmin">SuperAdmin</option>
+                    </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="enabled" class="col-sm-3 col-form-label">Enabled:</label>
+                    <div class="col-sm-2 enabled-wrap">
+                      <input type="checkbox" class="form-control" id="enabled" name="enabled" >
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+    </div>
+  </div>
+</body>
+
+</html>
